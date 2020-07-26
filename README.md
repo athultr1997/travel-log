@@ -11,6 +11,8 @@ A web application for travel logging
 1. cors: for seperate frontend and backend
 1. helmet: for secure requests
 1. morgan: for logging requests
+1. mongoose: for database management
+1. dotnev: for environment variables
 
 #### Dev Dependencies
 1. eslint
@@ -23,8 +25,9 @@ A web application for travel logging
   * Longitude: Number
   * Latitude: Number
   * Start Date: DateTime
-  * End Date: DateTime  
+  * End Date: DateTime
   * Image: Text (URL)
   * Description: Text
   * Time Created: DateTime
   * Time Updated: DateTime
+  

@@ -2,17 +2,27 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
 const middlewares = require('./middlewares');
+const logsRouter = require('./api/logs');
+
+dotenv.config();
 
 const app = express();
 
 const port = process.env.PORT || 1300;
 
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 app.use(morgan('combined'));
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.CORS_ORIGIN,
 }));
 
 app.get('/', (req, res) => {
@@ -20,6 +30,8 @@ app.get('/', (req, res) => {
     message: 'hello world!',
   });
 });
+
+app.use('/api/logs', logsRouter);
 
 app.use(middlewares.notFound);
 
