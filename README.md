@@ -18,6 +18,10 @@ A web application for travel logging
 1. eslint
 1. nodemon
 
+#### Frontend Dependencies
+1. reactjs
+1. react-map-gl
+
 ### Database
 
 #### Log
