@@ -11,7 +11,7 @@ const App = () => {
     latitude: 27.1751,
     longitude: 78.0421,
     zoom: 5,
-  });  
+  });
 
   useEffect(() => {
     (async () => {
