@@ -8,8 +8,37 @@ body {
   overflow: hidden;
 }
 
-.marker {
-  height: 24px;
-  width: 24px;
+.marker {  
   transform: translate(-50%, -100%);
+}
+
+.marker.yellow path {
+  fill: #F3B73E;
+}
+
+.marker.red path {
+  fill:red;
+}
+
+.popup {
+  width: 40vw;
+  padding: 1rem;
+}
+
+.popup img {
+  height: 200px;
+  width: auto;
+  display: block;
+  text-align: center;
+}
+
+.creation-form label, .creation-form input, .creation-form textarea, .creation-form button {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+}
+
+.error {
+  color:red;
 }

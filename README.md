@@ -21,6 +21,7 @@ A web application for travel logging
 #### Frontend Dependencies
 1. reactjs
 1. react-map-gl
+1. react-hook-form
 
 ### Database
 
